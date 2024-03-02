@@ -106,10 +106,10 @@ public class WarehouseSystemApp extends JFrame {
 
         if (existingProduct != null) {
             String newName = nameTextField.getText();
-            double newPrice = Double.parseDouble(priceTextField.getText());
+//            double newPrice = Double.parseDouble(priceTextField.getText());
 
             existingProduct.setName(newName);
-            existingProduct.setQuantity(newPrice);
+//            existingProduct.setQuantity(newPrice);
 
             productService.saveProduct(existingProduct);
 
