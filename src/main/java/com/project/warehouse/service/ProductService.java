@@ -12,7 +12,7 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public List<Product> getAllProducts() {
+    public List <Product> getAllProducts() {
         return productRepository.findAll();
     }
 
@@ -27,4 +27,10 @@ public class ProductService {
     public void deleteProduct(Long id) {
         productRepository.deleteById(id);
     }
+
+    public List<Product> findByName(String productName) {
+        return productRepository.findByNameContains(productName);
+    }
+
+
 }
